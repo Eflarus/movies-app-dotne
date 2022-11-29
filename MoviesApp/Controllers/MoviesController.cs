@@ -21,8 +21,8 @@ namespace MoviesApp.Controllers
             _logger = logger;
         }
 
-        // GET: Movies
         [HttpGet]
+        // GET: Movies
         public IActionResult Index()
         {
             return View(_context.Movies.Select(m => new MovieViewModel
@@ -35,8 +35,8 @@ namespace MoviesApp.Controllers
             }).ToList());
         }
 
-        // GET: Movies/Details/5
         [HttpGet]
+        // GET: Movies/Details/5
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -189,7 +189,7 @@ namespace MoviesApp.Controllers
             var movie = _context.Movies.Find(id);
             _context.Movies.Remove(movie);
             _context.SaveChanges();
-            _logger.LogError($"Movie with id {movie.Id} has been deleted!");
+            _logger.LogWarning($"Movie with id {movie.Id} has been deleted!");
             return RedirectToAction(nameof(Index));
         }
 
