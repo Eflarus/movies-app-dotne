@@ -10,7 +10,7 @@ namespace MoviesApp.Filters
         {
             var formDate = DateTime.Parse(context.HttpContext.Request.Form["BirthDate"]);
             var age = Years(formDate, DateTime.Now);
-            if (age < 7 | age > 99 )
+            if (age is < 7 or > 99 )
             {
                 context.Result = new BadRequestResult();
             }
