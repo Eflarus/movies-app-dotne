@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using MoviesApp.Filters;
 
 namespace MoviesApp.ViewModels.Movies
 {
@@ -12,6 +13,7 @@ namespace MoviesApp.ViewModels.Movies
         
         [Required]
         [DataType(DataType.Date)]
+        [OldMovie(1900)]
         public DateTime ReleaseDate { get; set; }
         
         [Required]
