@@ -1,12 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using MoviesApp.Data;
 using MoviesApp.Middleware.ActorRequestLogMiddleware;
 using MoviesApp.Middleware.RequestLogMiddleware;
+using MoviesApp.Services.ActorServices;
+using MoviesApp.Services.MovieServices;
 
 namespace MoviesApp
 {
@@ -38,6 +35,9 @@ namespace MoviesApp
             
             //Подключаем AutoMapper
             services.AddAutoMapper(typeof(Startup));
+            
+            services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IActorService, ActorService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
