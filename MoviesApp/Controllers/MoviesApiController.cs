@@ -36,14 +36,14 @@ namespace MoviesApp.Controllers
         }
         
         [HttpPost] // POST: api/movies
-        public ActionResult<MovieDto> PostMovie(MovieDto inputDto)
+        public ActionResult<MovieDto> PostMovie([FromBody] MovieDto inputDto)
         {
             var movie = _service.AddMovie(inputDto);
             return CreatedAtAction("GetById", new { id = movie.Id }, movie);
         }
         
         [HttpPut("{id}")] // PUT: api/movies/5
-        public IActionResult UpdateMovie(int id, MovieDto editDto)
+        public IActionResult UpdateMovie(int id, [FromBody] MovieDto editDto)
         {
             var movie = _service.UpdateMovie(editDto);
 

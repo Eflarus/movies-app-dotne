@@ -13,11 +13,11 @@ namespace MoviesApp.Services.Dto
 
         [Required]
         [MinStringLength(4)]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
         
         [Required]
         [MinStringLength(4)]
-        public string Surname { get; set; }
+        public string LastName { get; set; }
         
         [Display(Name = "Birth Date"), DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }

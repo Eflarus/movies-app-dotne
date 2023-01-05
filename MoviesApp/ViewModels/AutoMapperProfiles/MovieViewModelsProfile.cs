@@ -1,6 +1,6 @@
 using AutoMapper;
 using MoviesApp.Services.Dto;
-using MoviesApp.ViewModels.Movies;
+using MoviesApp.ViewModels.MovieViewModels;
 
 namespace MoviesApp.ViewModels.AutoMapperProfiles
 {

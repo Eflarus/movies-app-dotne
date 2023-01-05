@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using MoviesApp.Filters;
 
-namespace MoviesApp.ViewModels.Movies
+namespace MoviesApp.ViewModels.MovieViewModels
 {
     public class InputMovieViewModel
     {

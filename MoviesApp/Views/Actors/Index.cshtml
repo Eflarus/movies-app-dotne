@@ -1,5 +1,5 @@
 @using System.Linq
-@model IEnumerable<MoviesApp.ViewModels.Actors.ActorViewModel>
+@model IEnumerable<MoviesApp.ViewModels.ActorViewModels.ActorViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -14,10 +14,10 @@
     <thead>
         <tr>
             <th>
-                <label asp-for="@Model.First().Name"></label>
+                <label asp-for="@Model.First().FirstName"></label>
             </th>
             <th>
-                <label asp-for="@Model.First().Surname"></label>
+                <label asp-for="@Model.First().LastName"></label>
             </th>
             <th>
                 <label asp-for="@Model.First().BirthDate"></label>
@@ -29,10 +29,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @item.Name
+                @item.FirstName
             </td>
             <td>
-                @item.Surname
+                @item.LastName
             </td>
             <td>
                 @item.BirthDate.ToString("dd.MM.yyyy")

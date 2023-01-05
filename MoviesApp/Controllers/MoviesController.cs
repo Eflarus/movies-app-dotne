@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using MoviesApp.Filters;
 using MoviesApp.Services.Dto;
 using MoviesApp.Services.MovieServices;
-using MoviesApp.ViewModels.Movies;
+using MoviesApp.ViewModels.MovieViewModels;
 
 namespace MoviesApp.Controllers
 {

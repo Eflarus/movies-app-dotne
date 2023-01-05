@@ -8,7 +8,7 @@ using MoviesApp.Data;
 
 #nullable disable
 
-namespace MoviesApp.Data.Migrations
+namespace MoviesApp.Migrations
 {
     [DbContext(typeof(MoviesContext))]
     partial class MoviesContextModelSnapshot : ModelSnapshot
@@ -166,11 +166,11 @@ namespace MoviesApp.Data.Migrations
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Surname")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MoviesApp.Models;
-using MoviesApp.ViewModels.AccountViewModel;
+using MoviesApp.ViewModels.AccountViewModels;
 
 namespace MoviesApp.Controllers
 {

@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using MoviesApp.Filters;
 using MoviesApp.Services.ActorServices;
 using MoviesApp.Services.Dto;
-using MoviesApp.ViewModels.Actors;
+using MoviesApp.ViewModels.ActorViewModels;
 
 namespace MoviesApp.Controllers
 {
@@ -67,7 +67,7 @@ namespace MoviesApp.Controllers
         [Authorize(Roles = "Admin")] 
         [ValidateAntiForgeryToken]
         [EnsureAppropriateAge]
-        public IActionResult Create([Bind("Name,Surname,BirthDate")] InputActorViewModel inputModel)
+        public IActionResult Create([Bind("FirstName,LastName,BirthDate")] InputActorViewModel inputModel)
         {
             if (ModelState.IsValid)
             {
@@ -104,7 +104,7 @@ namespace MoviesApp.Controllers
         [Authorize(Roles = "Admin")] 
         [ValidateAntiForgeryToken]
         [EnsureAppropriateAge]
-        public IActionResult Edit(int id, [Bind("Name,Surname,BirthDate")] EditActorViewModel editModel)
+        public IActionResult Edit(int id, [Bind("FirstName,LastName,BirthDate")] EditActorViewModel editModel)
         {
             if (ModelState.IsValid)
             {

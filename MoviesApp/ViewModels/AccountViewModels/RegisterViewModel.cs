@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MoviesApp.ViewModels.AccountViewModel
+namespace MoviesApp.ViewModels.AccountViewModels
 {
     public class RegisterViewModel
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace MoviesApp.ViewModels.Actors
+namespace MoviesApp.ViewModels.ActorViewModels
 {
     public class ActorViewModel:InputActorViewModel
     {
